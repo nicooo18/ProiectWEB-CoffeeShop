@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reviews - Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+       body {
+      font-family: Garamond, sans-serif;
+      background-color: MistyRose;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    .review-title {
+      text-align: center;
+      margin-top: 90px;
+      color: pink;
+    }
+  .form-container {
+    width: 480px;
+    padding: 30px 35px 40px 35px;
+    background-color: #ffe4e1;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  padding: 10px 14px;       
+  font-size: 1em;  
+  width: 100%;
+  border: 1.5px solid #d4a5a5;
+  border-radius: 14px;
+  box-shadow: inset 1px 1px 5px #ffd9d9;
+  color: #5a3e3e;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #d99e9e;
+  font-style: italic;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+  border-color: rosybrown;
+  outline: none;
+  box-shadow: 0 0 8px rosybrown;
+}
+
+    .form-container button {
+      padding: 14px;
+      background-color: rosybrown;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.15em;
+      box-shadow: 0 4px 8px rgba(139, 94, 94, 0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #8b5e5e;
+      transform: scale(1.05);
+    }
+
+
+    .review {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .username {
+      font-weight: bold;
+      color: rosybrown;
+    }
+
+    .stars {
+      color: gold;
+    }
+
+    .comment {
+      margin-top: 8px;
+    }
+    .reviews-wrapper {
+      overflow: hidden;
+      width: 100%;
+      background: #ffe4e1;
+      margin: 30px auto;
+      padding: 20px 0;
+    }
+
+    .reviews-container {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scrollReviews 30s linear infinite;
+    }
+
+    @keyframes scrollReviews {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .form-video-wrapper {
+      display: flex;
+      justify-content: center;  
+      gap: 40px;              
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      padding: 0 20px;
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
+    }
+    .video-container {
+      flex: 0 0 35%; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 320px; 
+    }
+    .video-container video {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    /* Responsivitate pentru telefoane */
+@media (max-width: 600px) {
+  .review-title {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 20px;
+    margin: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .form-video-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .video-container {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .video-container video {
+    width: 100%;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+    animation: none;
+  }
+
+  .review {
+    margin: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><img src="coffeelogo.png" alt="Coffee Shop Logo" class="logo"> Coffee Shop</h1>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <div class="dropdown">
+        <button class="dropbtn">More</button>
+        <div class="dropdown-content">
+          <button onclick="location.href='menu.html'">Menu</button>
+          <button onclick="location.href='review.html'">Reviews</button>
+          <button onclick="location.href='recipes.html'">Recipes</button>
+          <button onclick="location.href='quiz.html'">Quiz</button>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <h1 class="review-title">Customer Reviews ☕</h1>
+  <div class="reviews-wrapper">
+  <div class="reviews-container" id="scrollingReviews"></div>
+  </div>
+ <div class="form-video-wrapper">
+  <div class="form-container">
+    <input type="text" id="usernameInput" placeholder="Your name">
+    <select id="starRatingInput" aria-label="Select your star rating">
+      <option value="1">★☆☆☆☆</option>
+      <option value="2">★★☆☆☆</option>
+      <option value="3">★★★☆☆</option>
+      <option value="4">★★★★☆</option>
+      <option value="5">★★★★★</option>
+    </select>
+    <textarea id="commentInput" placeholder="What did you think of our coffee?" rows="4"></textarea>
+    <button id="addReviewBtn">Submit Review</button>
+  </div>
+  
+  <div class="video-container">
+    <video src="coffeevideo.mp4" autoplay muted loop playsinline></video>
+  </div>
+  </div>
+
+  <script src="review.js"></script>
+  <footer class="footer">
+  <p>Follow us:</p>
+  <div class="social-icons">
+  <a href="https://www.instagram.com/celinecafebrasov?igsh=MXI5cW5hZjRncGpscg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <img src="insta.jpg" alt="Instagram" />
+  </a>
+  <a href="https://vm.tiktok.com/ZNdr7yP6M/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+  <img src="tiktok.jpg" alt="TikTok" />
+  </a>
+  <a href="https://www.facebook.com/share/1DjwaH9XNf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+  <img src="facebook.jpg" alt="Facebook" />
+  </a>
+  </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,347 @@
+body {
+    font-family: Garamond, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    color: White;
+    padding-top: 80px;
+}
+
+header {
+    background: MistyRose;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    gap: 5px;
+}
+
+footer {
+    background: MistyRose;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    color: pink;
+    font-size: 1.2em;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+  filter: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: Pink;
+    display: flex;  
+    align-items: center; 
+    gap: 10px; 
+}
+
+header h1 .logo {
+    width: 40px; 
+    height: auto;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+button {
+    background: Pink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block; /* Asigurăm că butoanele sunt inline */
+}
+
+button:hover {
+    background: #ffd1e0;
+}
+
+.quote {
+    color: Pink;
+    width: 50%;
+    font-size: 2em;
+    font-style: italic;
+    text-align: left;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background: Pink;
+    width: 40%;
+    margin: 20px 0;
+}
+
+.beans-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.promo-image img {
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.beans-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.coffee-beans {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.bean {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: MistyRose;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px MistyRose;
+}
+
+.bean img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.bean-info {
+    text-align: left;
+}
+
+.bean-info h3 {
+    margin: 0;
+    color: Pink; 
+}
+
+.bean-info p {
+    margin: 5px 0;
+    color: RosyBrown;
+}
+
+.about-us {
+    background-color: MistyRose;
+    padding: 50px 0;
+    margin: 50px auto;
+    width: 100%;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    color: Pink;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: RosyBrown;
+    font-size: 1.5em;
+    line-height: 1.6;
+    flex: 1;
+    min-width: 300px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown menu appearance */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: pink;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+/* Dropdown buttons */
+.dropdown-content button {
+  width: 100%;
+  padding: 12px 18px;
+  background-color: pink;
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #f8c6c6;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content button:hover {
+  background-color:  #ffd1e0;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-content,
+  .about-content,
+  .beans-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .quote,
+  .coffee-beans,
+  .about-text,
+  .about-image {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .bean {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bean img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Modificare: păstrăm butoanele inline, fără width 90% */
+  button {
+    width: auto !important;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  h1 {
+    flex-direction: row; /* păstrează headerul orizontal */
+    font-size: 2.5em; /* păstrează dimensiunea */
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .about-text p {
+    font-size: 1.2em;
+  }
+
+  .social-icons {
+    margin-top: 5px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}

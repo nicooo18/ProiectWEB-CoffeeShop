@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="styles.css">
+  <title>Recipe Finder</title>
+    <style>
+    body {
+  background: #fff0f5;
+  font-family: Garamond, sans-serif;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.recipe-title {
+    text-align: center;
+    color: pink;
+    margin-top: 50px;
+    font-family: Garamond, sans-serif;
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  #ingredientsInput {
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: Garamond, sans-serif;
+  }
+
+  #searchBtn {
+    padding: 12px 20px;
+    font-size: 1em;
+    background-color: rosybrown;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Garamond, sans-serif;
+  }
+
+  #searchBtn:hover {
+    background-color: #8b5e5e;
+  }
+
+  .recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+
+  .recipe-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    font-family: Garamond, sans-serif;
+  }
+
+  .recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .recipe-card img:hover {
+    transform: scale(1.05);
+  }
+
+  .recipe-card h3 {
+    color: pink;
+    margin: 10px 0 5px;
+  }
+
+  .recipe-card a {
+    text-decoration: none;
+    color: rosybrown;
+    font-weight: bold;
+  }
+
+  .recipe-card a:hover {
+    text-decoration: underline;
+  }
+  .description-text {
+  text-align: center;
+  color: pink;
+  font-size: 1.3em;
+  font-family: Garamond, serif;
+}
+  /* Responsivitate pentru telefoane */
+@media (max-width: 600px) {
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .recipe-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .input-section {
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  #ingredientsInput {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #searchBtn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .recipes-container {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .recipe-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .recipe-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .description-text {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+    <h1><img src="coffeelogo.png" alt="Coffee Shop Logo" class="logo"> Coffee Shop</h1>
+    <nav>
+        <button onclick="location.href='index.html'">Home</button>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <button onclick="location.href='menu.html'">Menu</button>
+                <button onclick="location.href='review.html'">Reviews</button>
+                <button onclick="location.href='recipes.html'">Recipes</button>
+                <button onclick="location.href='quiz.html'">Quiz</button>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+  <h1>Find Recipes by Ingredients 🎀</h1>
+  <p class="description-text"> Discover delightful recipes tailored to what you already have at home!</p>
+
+  <div class="input-section">
+  <input type="text" id="ingredientsInput" placeholder="Enter ingredients, comma separated (e.g. chicken, tomato)" />
+  <button id="searchBtn">Search Recipes</button>
+</div>
+
+  <div id="results"></div>
+<script src="recipes.js"></script>
+<footer class="footer">
+  <p>Follow us:</p>
+  <div class="social-icons">
+  <a href="https://www.instagram.com/celinecafebrasov?igsh=MXI5cW5hZjRncGpscg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <img src="insta.jpg" alt="Instagram" />
+  </a>
+  <a href="https://vm.tiktok.com/ZNdr7yP6M/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+  <img src="tiktok.jpg" alt="TikTok" />
+  </a>
+  <a href="https://www.facebook.com/share/1DjwaH9XNf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+  <img src="facebook.jpg" alt="Facebook" />
+  </a>
+  </div>
+  </footer>
+</body>
+</html>

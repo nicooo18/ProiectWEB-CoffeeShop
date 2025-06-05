@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Coffee Match</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Garamond, sans-serif;
+      background-color: MistyRose;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+    .question {
+      margin: 20px 0;
+    }
+    .result {
+      margin-top: 30px;
+    }
+    .result img {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+    /*  Responsivitate pentru telefoane */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .question {
+    font-size: 1rem;
+    margin: 15px 0;
+    padding: 0 10px;
+    text-align: center; 
+  }
+
+  .result {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.4; 
+    text-align: center; 
+  }
+
+  .result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <header>
+    <h1><img src="coffeelogo.png" alt="Coffee Shop Logo" class="logo"> Coffee Shop</h1>
+    <nav>
+        <button onclick="location.href='index.html'">Home</button>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <button onclick="location.href='menu.html'">Menu</button>
+                <button onclick="location.href='review.html'">Reviews</button>
+                <button onclick="location.href='recipes.html'">Recipes</button>
+                <button onclick="location.href='quiz.html'">Quiz</button>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+  <h1>Discover Your Coffee Match ☕</h1>
+
+  <div class="question">
+    <p>1. How do you prefer your coffee?</p>
+    <label><input type="radio" name="q1" value="strong"> Strong & bold</label><br>
+    <label><input type="radio" name="q1" value="creamy"> Creamy & smooth</label><br>
+    <label><input type="radio" name="q1" value="cold"> Refreshing & cold</label>
+  </div>
+
+  <div class="question">
+    <p>2. What flavor profile do you prefer?</p>
+    <label><input type="radio" name="q2" value="classic"> Classic espresso taste</label><br>
+    <label><input type="radio" name="q2" value="sweet"> Sweet & fruity</label><br>
+    <label><input type="radio" name="q2" value="matcha"> Berry or matcha flavor</label>
+  </div>
+
+  <div class="question">
+    <p>3. What time of day do you drink coffee?</p>
+    <label><input type="radio" name="q3" value="morning"> Morning</label><br>
+    <label><input type="radio" name="q3" value="afternoon"> Afternoon</label><br>
+    <label><input type="radio" name="q3" value="evening"> Evening</label>
+  </div>
+
+  <button onclick="submitQuiz()">Get Recommendation</button>
+
+  <div class="result" id="result"></div>
+
+  <script src="quiz.js"></script>
+  <footer class="footer">
+  <p>Follow us:</p>
+  <div class="social-icons">
+  <a href="https://www.instagram.com/celinecafebrasov?igsh=MXI5cW5hZjRncGpscg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <img src="insta.jpg" alt="Instagram" />
+  </a>
+  <a href="https://vm.tiktok.com/ZNdr7yP6M/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+  <img src="tiktok.jpg" alt="TikTok" />
+  </a>
+  <a href="https://www.facebook.com/share/1DjwaH9XNf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+  <img src="facebook.jpg" alt="Facebook" />
+  </a>
+  </div>
+  </footer>
+</body>
+</html>

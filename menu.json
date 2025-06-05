@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Capuccino",
+    "description": "Espresso with steamed milk and foam.",
+    "price": "12 RON",
+    "image": "capuccino.jpg"
+  },
+  {
+    "name": "Latte",
+    "description": "Creamy and smooth.",
+    "price": "16 RON",
+    "image": "latte.jpg"
+  },
+  {
+    "name": "Pink Latte",
+    "image": "pinklatte.jpg",
+    "description": "A creamy latte with a hint of berry flavor.",
+    "price": "18 RON"
+  },
+  {
+    "name": "Ice Coffee",
+    "image": "icecoffee.jpg",
+    "description": "Refreshing cold coffee served with ice.",
+    "price": "16 RON"
+  },
+  {
+    "name": "Espresso",
+    "image": "espresso.jpg",
+    "description": "Strong and bold shot of espresso.",
+    "price": "10 RON"
+  },
+  {
+    "name": "Pink Matcha",
+    "image": "pinkmatcha.jpg",
+    "description": "Matcha infused with raspberry and milk.",
+    "price": "20 RON"
+  },
+  {
+    "name": "Strawberry Drink",
+    "image": "strawberrydrink.jpg",
+    "description": "Sweet strawberry milk drink.",
+    "price": "18 RON"
+  },
+  {
+    "name": "Strawberry Lemonade",
+    "image": "strawberrylemonade.jpg",
+    "description": "Refreshing lemonade with strawberry flavor.",
+    "price": "14 RON"
+  }
+
+]

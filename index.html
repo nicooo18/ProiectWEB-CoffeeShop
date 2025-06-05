@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="coffeelogo.png">
+</head>
+<style>
+  .partners {
+    margin: 40px auto;
+    padding: 20px 0;
+    background-color: #fff5f5;
+    border-top: 2px solid #f1dada;
+    text-align: center;
+  }
+
+  .partners h2 {
+    color: pink;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .partners a {
+    color: #8b5e5e;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: color 0.3s;
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 1rem;
+  }
+
+  .partners a:hover {
+    color: #d87b7b;
+  }
+
+ @media (max-width: 600px) {
+    .partners {
+      padding: 15px 10px;
+    }
+
+    .partners h2 {
+      font-size: 1.25rem;
+    }
+
+    .partners a {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 10px 0;
+      font-size: 1rem;
+      white-space: normal;
+    }
+  }
+</style>
+
+
+<body>
+
+    <header>
+        <h1> <img src="coffeelogo.png" alt="Coffee Shop Logo" class="logo">Coffee Shop
+
+        </h1>
+        <nav>
+            <button onclick="location.href='home.html'">Home</button>
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <button onclick="location.href='menu.html'">Menu</button>
+                    <button onclick="location.href='review.html'">Reviews</button>
+                    <button onclick="location.href='recipes.html'">Recipes</button>
+                    <button onclick="location.href='quiz.html'">Quiz</button>
+
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <section class="main-content">
+        <div class="quote">
+            <p>"Coffee is always a good idea." </p>
+        </div>
+        <div class="image-container">
+            <img src="logocafea.png" alt="A cup of coffee">
+        </div>
+        <hr class="divider">
+
+    </section>
+ <section class="coffee-beans">
+  <h2>Types of Coffee Beans</h2>
+  <div class="beans-wrapper">
+    <div class="promo-image">
+      <img src="promo.jpg" alt="Promotional Coffee Image">
+    </div>
+    <div class="beans-info">
+      <div class="bean">
+        <img src="arabicabeans.png" alt="Arabica Beans">
+        <div class="bean-info hidden">
+          <h3>Arabica</h3>
+          <p>Arabica beans are known for their smooth and mild flavor, with sweet, fruity, and floral notes.</p>
+        </div>
+      </div>
+
+      <div class="bean">
+        <img src="robustabeans.png" alt="Robusta Beans">
+        <div class="bean-info hidden">
+          <h3>Robusta</h3>
+          <p>Robusta beans have a stronger, more bitter taste, with earthy and nutty flavors, and contain more caffeine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+    <section class="about-us">
+        <div class="about-content">
+            <div class="about-text hidden">
+                <h2>About Us</h2>
+                <p>At our coffee shop, every cup of coffee tells a story. Our atmosphere is cozy and truly welcoming — the perfect place to spend your morning.</p>
+                <p>Whether your favorite coffee is a strong espresso or a creamy latte, we’ve got something special just for you.</p>
+                <p>"More than just coffee — it’s a feeling."</p>
+            </div>
+            <div class="about-image">
+                <img src="cafenea.png" alt="Cozy coffee shop interior">
+            </div>
+        </div>
+    </section>
+    
+    </section>
+  <script src="index.js"></script>
+  <section class="partners">
+  <h2>Partners</h2>
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 20px 0;">
+    <a href="https://scanstart.ro/servicii.php" target="_blank" rel="noopener noreferrer" style="color: #8b5e5e; font-weight: bold; text-decoration: none;">
+      ScanStart
+    </a>
+    <a href="http://csac.ulbsibiu.ro/" target="_blank" rel="noopener noreferrer" style="color: #8b5e5e; font-weight: bold; text-decoration: none;">
+      CSAC ULBS
+    </a>
+    <a href="https://www.instagram.com/cie.engineering_ulbs/?hl=en" target="_blank" rel="noopener noreferrer" style="color: #8b5e5e; font-weight: bold; text-decoration: none;">
+      CIE Instagram
+    </a>
+  </div>
+</section>
+  <footer class="footer">
+  <p>Follow us:</p>
+  <div class="social-icons">
+  <a href="https://www.instagram.com/celinecafebrasov?igsh=MXI5cW5hZjRncGpscg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <img src="insta.jpg" alt="Instagram" />
+  </a>
+  <a href="https://vm.tiktok.com/ZNdr7yP6M/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+  <img src="tiktok.jpg" alt="TikTok" />
+  </a>
+  <a href="https://www.facebook.com/share/1DjwaH9XNf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+  <img src="facebook.jpg" alt="Facebook" />
+  </a>
+  </div>
+  </footer>
+
+</body>
+</html>

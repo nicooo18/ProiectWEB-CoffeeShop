@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorites - Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+ <style>
+  body {
+    font-family: Garamond, sans-serif;
+    background-color: MistyRose;
+    padding: 80px;
+    color: #333;
+  }
+
+  h1 {
+    color: pink;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+
+  .favorites-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .favorite-item {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .favorite-item:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  }
+
+  .favorite-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .favorite-item h3 {
+    color: pink;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .favorite-item .price {
+    color: rosybrown;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .remove-favorite {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .remove-favorite:hover {
+    background-color: MistyRose;
+    color: pink;
+    border: 1px solid pink;
+  }
+
+  /* Responsivitate pentru telefoane */
+  @media (max-width: 600px) {
+    body {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .favorite-item {
+      max-width: 100%;
+    }
+
+    .remove-favorite {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+    <header>
+    <h1><img src="coffeelogo.png" alt="Coffee Shop Logo" class="logo"> Coffee Shop</h1>
+    <nav>
+        <button onclick="location.href='index.html'">Home</button>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <button onclick="location.href='menu.html'">Menu</button>
+                <button onclick="location.href='review.html'">Reviews</button>
+                <button onclick="location.href='recipes.html'">Recipes</button>
+                <button onclick="location.href='quiz.html'">Quiz</button>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+  <h1>Your Favorites 💕</h1>
+  <div class="favorites-section">
+    <!-- produsele favorite din js vor fi aduse aici -->
+  </div>
+
+  <script src="favorites.js"></script>
+      <footer class="footer">
+  <p>Follow us:</p>
+  <div class="social-icons">
+  <a href="https://www.instagram.com/celinecafebrasov?igsh=MXI5cW5hZjRncGpscg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <img src="insta.jpg" alt="Instagram" />
+  </a>
+  <a href="https://vm.tiktok.com/ZNdr7yP6M/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+  <img src="tiktok.jpg" alt="TikTok" />
+  </a>
+  <a href="https://www.facebook.com/share/1DjwaH9XNf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+  <img src="facebook.jpg" alt="Facebook" />
+  </a>
+  </div>
+  </footer>
+</body>
+</html>
